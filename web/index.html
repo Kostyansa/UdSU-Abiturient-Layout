@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Выбор направлений</title>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Заполнить заявление</a></li>
+          <li><a href="#">Сообщения</a></li>
+          <li><a href="https://udsu.ru/admissions/2023">Новости</a></li>
+          <li><a href="#">Сменить пароль</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header>
+        <ul class="tabs">
+          <li><a href="#">Личные документы</a></li>
+          <li><a href="#">Образование</a></li>
+          <li><a href="#">Место жительства</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Иные сведения</a></li>
+          <li><a href="#">Выбор направления</a></li>
+        </ul>
+      </header>
+
+      <main>
+        <section class="edit-row">
+          <select name="course" id="course">
+            <option value="">Выберите направление</option>
+            <option value="Направление 1">Направление 1</option>
+            <option value="Направление 2">Направление 2</option>
+          </select>
+
+          <div class="financing-options">
+            <label>
+              <input type="checkbox" name="financing1"> Бюджет/Основные места
+              <input type="number" min="1" placeholder="Приоритет" disabled>
+            </label>
+            <label>
+              <input type="checkbox" name="financing2"> Бюджет/Целевые места
+              <input type="number" min="1" placeholder="Приоритет" disabled>
+            </label>
+            <label>
+              <input type="checkbox" name="financing3"> Платное
+              <input type="number" min="1" placeholder="Приоритет" disabled>
+            </label>
+          </div>
+
+          <button class="button save-row">Добавить</button>
+        </section>
+
+        <section class="table-section">
+          <table>
+            <thead>
+              <tr>
+                <th>Направление</th>
+                <th>Бюджет/Основные места</th>
+                <th>Бюджет/Целевые места</th>
+                <th>Платное</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be added dynamically -->
+            </tbody>
+          </table>
+        </section>
+
+        <footer>
+          <button class="button save">Сохранить</button>
+          <button class="button form-request">Сформировать заявление</button>
+          <button class="button upload-request">Загрузить заявление</button>
+        </footer>
+      </main>
+    </div>
+  </div>
+<script src="scripts.js"></script>
+</body>
+</html>

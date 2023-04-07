@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #33c0cd;
+  height: 100vh;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #ccc;
+}
+
+.main-content {
+  width: 80%;
+}
+
+header {
+  background-color: #008e9b;
+  padding: 1em;
+}
+
+.tabs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.tabs li a {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.tabs li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 1em;
+}
+
+.edit-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.financing-options label {
+  display: flex;
+  gap: 0.5em;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section th, .table-section td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #eee;
+}
+
+footer {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  margin-top: 1em;
+}
+
+/* Add this line to your existing CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Basic button styles */
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #0056B3;
+}
+
+/* Differentiate action buttons */
+.button.save {
+  background-color: #28A745;
+}
+
+.button.save:hover {
+  background-color: #218838;
+}
+
+/* Delete button style */
+.button.delete {
+  background-color: #DC3545;
+}
+
+.button.delete:hover {
+  background-color: #C82333;
+}
+
