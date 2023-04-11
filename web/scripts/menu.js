@@ -20,8 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
     return rows.some(row => row.cells[0].innerText === courseName);
   }
 
-  function arePrioritiesUniqueForBudget(financing1, financing2) {
+  function arePrioritiesUniqueForBudget(financing1, financing2, rowIndex) {
     const rows = Array.from(tableBody.querySelectorAll('tr'));
+    console.log(rows);
+    if (rowIndex !== null) {
+      rows.splice(rowIndex, 1);
+    }
+    console.log(rows);
     const prioritiesInColumn1 = rows.map(row => row.cells[1].innerText);
     const prioritiesInColumn2 = rows.map(row => row.cells[2].innerText);
   
@@ -36,8 +41,11 @@ document.addEventListener('DOMContentLoaded', function() {
     return true;
   }  
 
-  function arePrioritiesUniqueForPaid(financing3) {
+  function arePrioritiesUniqueForPaid(financing3, rowIndex) {
     const rows = Array.from(tableBody.querySelectorAll('tr'));
+    if (rowIndex !== null) {
+      rows.splice(rowIndex, 1);
+    }
     const prioritiesInColumn3 = rows.map(row => row.cells[3].innerText);
   
     if (financing3 && (prioritiesInColumn3.includes(financing3))) {
@@ -115,12 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    if (!arePrioritiesUniqueForBudget(financing1, financing2)) {
+    if (!arePrioritiesUniqueForBudget(financing1, financing2, editingRowIndex)) {
       alert('Приоритеты для Бюджетных и целевых направлений должны быть уникальны');
       return;
     }  
 
-    if (!arePrioritiesUniqueForPaid(financing3)) {
+    if (!arePrioritiesUniqueForPaid(financing3, editingRowIndex)) {
       alert('Приоритеты для платных направлений должны быть уникальны');
       return;
     }  

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/login.css">
+  <title>Login</title>
+</head>
+<body>
+  <header class="global-header">
+    <img src="./files/logo144.png" alt="Логотип УдГУ" class="logo">
+    <h1>Удмуртский государственный университет</h1>
+  </header>
+  <div class="main-container">
+    <div class="login-container">
+      <h2>Вход</h2>
+      <form id="login-form">
+        <input type="text" placeholder="Логин" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="button login">Войти</button>
+        <button type="button" class="button register">Зарегистрироваться</button>
+      </form>
+      <a href="#" class="forgot-password">Забыли пароль?</a>
+    </div>
+
+    <div class="popup register-popup">
+      <h2>Регистрация</h2>
+      <form id="register-form">
+        <input type="text" placeholder="Логин" required>
+        <input type="email" placeholder="Электронная Почта" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit" class="button register">Зарегистрироваться</button>
+        <button type="button" class="button close">Закрыть</button>
+      </form>
+    </div>
+
+    <div class="popup registration-finished-popup">
+      <h2>Регистрация успешна</h2>
+      <h3>Данные для входа отправленны на электронную почту.</h3>
+      <p>Спасибо за регистрацию</p>
+      <button type="button" class="button close">Закрыть</button>
+    </div>
+  </div>
+  <footer class="global-footer">
+    <div class="footer-section global-footer-left">
+      © 1996–2023 Удмуртский государственный университет. Все права защищены<br>
+      <a href="https://mail.udsu.ru/">Корпоративная электронная почта УдГУ</a>
+    </div>
+    <div class="footer-section global-footer-center">
+      <p>Возникли проблемы при регистрации?</p>
+    </div>
+    <div class="footer-section global-footer-right">
+      Разработка и поддержка:<br>
+      ЦИО УдГУ
+    </div>
+  </footer>
+  <script src="./scripts/login.js"></script>
+</body>
+</html>

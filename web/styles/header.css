@@ -1,0 +1,60 @@
+.global-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #008c95;
+    color: #fff;
+    width: auto;
+    border-bottom: 3px solid #64c2cb;
+  }
+  
+  .global-header .logo {
+    width: 75px; /* Adjust the logo width according to your desired size */
+    margin-right: 1rem; /* Add some space between the logo and the text */
+  }
+  
+  .global-header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }  
+
+  .global-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 0;
+    background-color: #008c95;
+    color: #fff;
+    width: auto;
+    border-top: 3px solid #64c2cb;
+  }
+
+  .global-footer * a {
+    color: #fff;
+  }
+  
+  .footer-section {
+    flex-basis: calc(33% - 1rem);
+    margin-right: 1rem;
+  }
+  
+  .footer-section:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-section h3 {
+    margin-top: 0;
+  }
+  
+  .global-footer-left {
+    text-align: left;
+  }
+
+  .global-footer-center {
+    text-align: center;
+  }
+
+  .global-footer-right {
+    text-align: right;
+  }
